@@ -57,19 +57,19 @@
         "documentation": {}
     },
     {
-        "label": "static",
-        "importPath": "django.conf.urls.static",
-        "description": "django.conf.urls.static",
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "django.conf.urls.static",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "core",
-        "description": "core",
+        "label": "reverse_lazy",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "core",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -81,11 +81,20 @@
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "django.db.models.deletion",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "django.apps",
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -94,6 +103,38 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "medico.models",
+        "description": "medico.models",
+        "isExtraImport": true,
+        "detail": "medico.models",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -110,6 +151,54 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
         "documentation": {}
     },
     {
@@ -162,7 +251,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"medico.apps.MedicosConfig\",",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"medico.apps.MedicoConfig\",",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -171,7 +260,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"medico.apps.MedicosConfig\",\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"medico.apps.MedicoConfig\",\n]\nMIDDLEWARE = [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -288,7 +377,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('medicos.urls')),  # Inclui as URLs do seu aplicativo\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('medico.urls')) # inclu as URLS do app Medico\n]",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -302,12 +391,138 @@
         "documentation": {}
     },
     {
-        "label": "MedicosConfig",
+        "label": "Migration",
         "kind": 6,
-        "importPath": "medicos.apps",
-        "description": "medicos.apps",
-        "peekOfCode": "class MedicosConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'medicos'",
-        "detail": "medicos.apps",
+        "importPath": "medico.migrations.0001_initial",
+        "description": "medico.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Especialidade',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=100)),",
+        "detail": "medico.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "MedicoConfig",
+        "kind": 6,
+        "importPath": "medico.apps",
+        "description": "medico.apps",
+        "peekOfCode": "class MedicoConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'medico'",
+        "detail": "medico.apps",
+        "documentation": {}
+    },
+    {
+        "label": "EspecialidadeForm",
+        "kind": 6,
+        "importPath": "medico.forms",
+        "description": "medico.forms",
+        "peekOfCode": "class EspecialidadeForm(forms.ModelForm):\n    class Meta:\n        model = Especialidade\n        fields = ['nome', 'descricao']\nclass MedicoForm(forms.ModelForm):\n    class Meta:\n        model = Medico\n        fields = ['nome', 'endereco', 'telefone', 'email', 'data_nascimento', 'crm', 'especialidade']",
+        "detail": "medico.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MedicoForm",
+        "kind": 6,
+        "importPath": "medico.forms",
+        "description": "medico.forms",
+        "peekOfCode": "class MedicoForm(forms.ModelForm):\n    class Meta:\n        model = Medico\n        fields = ['nome', 'endereco', 'telefone', 'email', 'data_nascimento', 'crm', 'especialidade']",
+        "detail": "medico.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Especialidade",
+        "kind": 6,
+        "importPath": "medico.models",
+        "description": "medico.models",
+        "peekOfCode": "class Especialidade(models.Model):\n    nome = models.CharField(max_length=100)\n    descricao = models.TextField()\n    def __str__(self):\n        return self.nome\nclass Medico(models.Model):\n    nome = models.CharField(max_length=200)\n    endereco = models.TextField()\n    telefone = models.CharField(max_length=20)\n    email = models.EmailField()",
+        "detail": "medico.models",
+        "documentation": {}
+    },
+    {
+        "label": "Medico",
+        "kind": 6,
+        "importPath": "medico.models",
+        "description": "medico.models",
+        "peekOfCode": "class Medico(models.Model):\n    nome = models.CharField(max_length=200)\n    endereco = models.TextField()\n    telefone = models.CharField(max_length=20)\n    email = models.EmailField()\n    data_nascimento = models.DateField()\n    crm = models.CharField(max_length=50)\n    especialidade = models.ForeignKey(Especialidade, on_delete=models.CASCADE)\n    def __str__(self):\n        return self.nome",
+        "detail": "medico.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "medico.urls",
+        "description": "medico.urls",
+        "peekOfCode": "urlpatterns = [\n    path('especialidades/', EspecialidadeListView.as_view(), name='especialidade_list'),\n    path('especialidades/create/', EspecialidadeCreateView.as_view(), name='especialidade_create'),\n    path('especialidades/<int:pk>/update/', EspecialidadeUpdateView.as_view(), name='especialidade_edit'),\n    path('especialidades/<int:pk>/delete/', EspecialidadeDeleteView.as_view(), name='especialidade_delete'),\n    path('medicos/', MedicoListView.as_view(), name='medico_list'),\n    path('medicos/create/', MedicoCreateView.as_view(), name='medico_create'),\n    path('medicos/<int:pk>/update/', MedicoUpdateView.as_view(), name='medico_edit'),\n    path('medicos/<int:pk>/delete/', MedicoDeleteView.as_view(), name='medico_delete'),\n]",
+        "detail": "medico.urls",
+        "documentation": {}
+    },
+    {
+        "label": "EspecialidadeListView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class EspecialidadeListView(ListView):\n    model = Especialidade\n    template_name = 'especialidade_list.html'  \nclass EspecialidadeCreateView(CreateView):\n    model = Especialidade\n    form_class = EspecialidadeForm\n    template_name = 'especialidade_form.html'\n    success_url = reverse_lazy('especialidade_list')\nclass EspecialidadeUpdateView(UpdateView):\n    model = Especialidade",
+        "detail": "medico.views",
+        "documentation": {}
+    },
+    {
+        "label": "EspecialidadeCreateView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class EspecialidadeCreateView(CreateView):\n    model = Especialidade\n    form_class = EspecialidadeForm\n    template_name = 'especialidade_form.html'\n    success_url = reverse_lazy('especialidade_list')\nclass EspecialidadeUpdateView(UpdateView):\n    model = Especialidade\n    form_class = EspecialidadeForm\n    template_name = 'especialidade_form.html'\n    success_url = reverse_lazy('especialidade_list')",
+        "detail": "medico.views",
+        "documentation": {}
+    },
+    {
+        "label": "EspecialidadeUpdateView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class EspecialidadeUpdateView(UpdateView):\n    model = Especialidade\n    form_class = EspecialidadeForm\n    template_name = 'especialidade_form.html'\n    success_url = reverse_lazy('especialidade_list')\nclass EspecialidadeDeleteView(DeleteView):\n    model = Especialidade\n    template_name = 'especialidade_confirm_delete.html'\n    success_url = reverse_lazy('especialidade_list')\nclass MedicoListView(ListView):",
+        "detail": "medico.views",
+        "documentation": {}
+    },
+    {
+        "label": "EspecialidadeDeleteView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class EspecialidadeDeleteView(DeleteView):\n    model = Especialidade\n    template_name = 'especialidade_confirm_delete.html'\n    success_url = reverse_lazy('especialidade_list')\nclass MedicoListView(ListView):\n    model = Medico\n    template_name = 'medico_list.html'\nclass MedicoCreateView(CreateView):\n    model = Medico\n    form_class = MedicoForm",
+        "detail": "medico.views",
+        "documentation": {}
+    },
+    {
+        "label": "MedicoListView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class MedicoListView(ListView):\n    model = Medico\n    template_name = 'medico_list.html'\nclass MedicoCreateView(CreateView):\n    model = Medico\n    form_class = MedicoForm\n    template_name = 'medico_form.html'\n    success_url = reverse_lazy('medico_list')\nclass MedicoUpdateView(UpdateView):\n    model = Medico",
+        "detail": "medico.views",
+        "documentation": {}
+    },
+    {
+        "label": "MedicoCreateView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class MedicoCreateView(CreateView):\n    model = Medico\n    form_class = MedicoForm\n    template_name = 'medico_form.html'\n    success_url = reverse_lazy('medico_list')\nclass MedicoUpdateView(UpdateView):\n    model = Medico\n    form_class = MedicoForm\n    template_name = 'medico_form.html'\n    success_url = reverse_lazy('medico_list')",
+        "detail": "medico.views",
+        "documentation": {}
+    },
+    {
+        "label": "MedicoUpdateView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class MedicoUpdateView(UpdateView):\n    model = Medico\n    form_class = MedicoForm\n    template_name = 'medico_form.html'\n    success_url = reverse_lazy('medico_list')\nclass MedicoDeleteView(DeleteView):\n    model = Medico\n    template_name = 'medico_confirm_delete.html'\n    success_url = reverse_lazy('medico_list')\n# Create your views here.",
+        "detail": "medico.views",
+        "documentation": {}
+    },
+    {
+        "label": "MedicoDeleteView",
+        "kind": 6,
+        "importPath": "medico.views",
+        "description": "medico.views",
+        "peekOfCode": "class MedicoDeleteView(DeleteView):\n    model = Medico\n    template_name = 'medico_confirm_delete.html'\n    success_url = reverse_lazy('medico_list')\n# Create your views here.",
+        "detail": "medico.views",
         "documentation": {}
     },
     {
